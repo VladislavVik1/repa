@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Секреты вирусных видео — Курс</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="desktop-1280.css" media="(min-width:1280px)">
+    <script defer src="script.js"></script> 
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav__inner">
+      <div class="logo">ALEKO <span>SOKURASHVILI</span></div>
+      <div style="display:flex; gap:27px; align-items:center">
+        <div class="ru">
+          <button class="ru__btn" aria-haspopup="listbox" aria-expanded="false">RU</button>
+        </div>
+        <button class="burger" aria-label="Меню"><span class="bar"></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <section class="hero">
+      <div class="hero-card">
+        <figure class="hero__img">
+            <img alt="Автор курса" src="img/author.jpg"/>
+            <figcaption class="eyebrow">От 0 до 100,000 за 90 дней</figcaption>
+          </figure>
+        <h1 class="h1">СЕКРЕТЫ<br/>ВИРУСНЫХ<br/>ВИДЕО</h1>
+        <p>Станьте известным всего за 3 месяца без затрат на рекламу! Узнайте ключ к созданию вирусного контента и превратите свои идеи в миллионные просмотры.</p>
+        <div class="cta-wrap">
+          <button class="cta js-open">
+            Купить со скидкой
+            <span class="badge">-50%</span>
+          </button>
+          <div class="price"><span class="now">1000 грн</span> <span class="old">2000 грн</span></div>
+        </div>
+      </div>
+    </section>
+
+
+    <h2 class="section-title" id="pricing">ТАРИФЫ</h2>
+    <section class="pricing">
+
+      <article class="card">
+        <div class="card__title">Базовый</div>
+        <div class="card__price"><b>99 $</b> <s>139 $</s></div>
+        <ul class="bullets">
+          <li><span class="dot"></span>Базовый курс</li>
+          <li><span class="dot"></span>38 уроков</li>
+        </ul>
+        <button class="js-open">Купить</button>
+      </article>
+
+
+      <article class="card white">
+        <div class="best">BEST SELLER</div>
+        <div class="chip">PRO</div>
+        <div class="card__title card_pro">Продвинутый</div>
+        <div class="card__price card_pro"><b>149 $</b> <s>199 $</s></div>
+        <ul class="bullets" style="color:#0f0a1a">
+          <li><span class="dot"></span>База</li>
+          <li><span class="dot"></span>Дополнительные уроки</li>
+          <li><span class="dot"></span>48 уроков</li>
+          <li><span class="dot"></span>Чат‑комьюнити для создателей контента</li>
+        </ul>
+        <button class="js-open">Купить</button>
+      </article>
+
+
+      <article class="card blue">
+        <div class="chip light">EXPERT</div>
+        <div class="card__title">Эксперт</div>
+        <div class="card__price"><b>299 $</b> <s>500 $</s></div>
+        <ul class="bullets">
+          <li><span class="dot"></span>Дополнительные уроки</li>
+          <li><span class="dot"></span>48 уроков</li>
+          <li><span class="dot"></span>Чат‑комьюнити для создателей контента</li>
+          <li><span class="dot"></span>Разбор вашей страницы в формате видеозвонка</li>
+        </ul>
+        <button class="js-open" style="background:rgba(15,10,26,.86)">Купить</button>
+      </article>
+    </section>
+
+
+    <section class="cta-strip">
+        <div class="cta-strip__inner">
+            <h3>Узнай, как создавать контент, который
+                <span class="cta-accent">покоряет аудитории</span>
+              </h3>
+          <p>Материалы, способные стать вирусными и охватить тысячи людей!</p>
+          <div class="cta-wrap">
+            <button class="cta js-open">Купить со скидкой <span class="badge">-50%</span></button>
+          </div>
+        </div>
+      </section>
+
+    <div class="spacer"></div>
+  </main>
+
+
+<div class="modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="orderTitle">
+    <div class="modal__box">
+    <button class="close" aria-label="Закрыть">✕</button>
+    <form class="form" onsubmit="event.preventDefault(); alert('Заявка отправлена!'); closeModal();">
+    <h3 class="modal__title" id="orderTitle">Укажите свои данные</h3>
+    <input class="field" placeholder="Имя" required>
+    <input class="field" placeholder="Ник Telegram" required>
+    <input class="field" type="email" placeholder="Email" required>
+    <button class="submit" type="submit">Отправить</button>
+    </form>
+    </div>
+    </div>
+
+</body>
+</html>

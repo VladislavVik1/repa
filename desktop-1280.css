@@ -1,0 +1,134 @@
+/* ===== Desktop (>=1280px) overrides ===== */
+@media (min-width:1280px){
+
+    /* контейнер и навбар */
+    .container{max-width:1200px; padding-inline:24px;}
+    .nav__inner{height:76px}
+    .logo{font-size:18px}
+    .ru__btn{font-size:15px}
+    .burger{width:44px; height:44px}
+    .burger .bar,.burger .bar::before,.burger .bar::after{height:3px; width:26px}
+  
+    /* ---------- HERO ---------- */
+  
+    /* двухколоночная карточка */
+    .hero{padding:48px 0 24px}
+    .hero-card{
+      position:relative;
+      display:grid;
+      grid-template-columns:560px 1fr;
+      column-gap:48px;
+      align-items:center;
+      padding:28px;
+      border-radius:28px!important;
+      background:
+        radial-gradient(120% 120% at 12% 85%, rgba(106,228,255,.08) 0, rgba(106,228,255,0) 50%),
+        radial-gradient(120% 120% at 88% 5%,  rgba(145,85,255,.10) 0, rgba(145,85,255,0) 52%),
+        linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,0) 100%) !important;
+      box-shadow:var(--shadow);
+    }
+  
+    /* фото слева */
+    .hero .hero__img{
+      position:relative!important;            /* базовый контекст для eyebrow */
+      grid-column:1;
+      grid-row:1 / span 4;
+      margin:0!important;
+      width:560px!important;
+      border-radius:28px!important;
+      overflow:visible;                        /* eyebrow может выходить за рамку */
+    }
+    .hero .hero__img img{
+      width:100%;
+      height:560px!important;
+      object-fit:cover;
+      border-radius:0!important;
+    }
+    .hero .hero__img::after{
+      content:"";
+      position:absolute; inset:0;
+      background:linear-gradient(180deg,
+                  rgba(0,0,0,0) 0%,
+                  rgba(0,0,0,.18) 55%,
+                  rgba(0,0,0,.42) 100%);
+      pointer-events:none; z-index:2;
+    }
+  
+    /* заголовок справа */
+    .hero .h1{
+      grid-column:2; grid-row:1;
+      margin:0 0 12px!important;
+      text-align:left!important;
+      max-width:16ch;
+      font-size:88px!important;
+      line-height:1!important;
+      z-index:3;
+    }
+  
+    /* eyebrow — ПОД заголовком, справа от фото */
+/* правильный стек слоёв */
+.hero-card{ position: relative; }
+.hero .hero__img{ position: relative !important; overflow: visible; z-index: 1; }
+.hero .hero__img::after{ z-index: 2; }
+.hero .h1{ position: relative; z-index: 3; }
+
+/* eyebrow — справа от фото, ПОД заголовком */
+.hero .eyebrow{
+  position: absolute !important;
+  left: calc(100% + 48px) !important;          /* сразу за фото */
+  top: clamp(240px, 21vw, 300px) !important;   /* уровень под заголовком */
+  z-index: 4 !important;                       /* ВЫШЕ оверлея и фото */
+
+  transform: none !important;
+  width: auto !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+  pointer-events: none;
+
+  font: 700 22px/1 'Raleway','Inter',system-ui;
+  background: linear-gradient(90.63deg,#90E8FF .44%,#9C9EFF 69.99%,#E3A1FF 138.27%,#E56F8C 173.01%);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent;
+}
+  
+    /* текст справа под заголовком */
+    .hero p{
+      grid-column:2; grid-row:2;
+      margin:10px 0 22px!important;
+      max-width:44ch;
+      text-align:left!important;
+      font-size:16px; line-height:1.6; color:#fff;
+    }
+  
+    /* кнопка и цена справа */
+    .hero .cta-wrap{grid-column:2; grid-row:3; margin-top:12px}
+    .hero .cta{width:360px; height:58px; font-size:15px}
+    .hero .cta .badge{width:60px; height:60px}
+    .hero .price{grid-column:2; grid-row:4; margin-top:12px; text-align:left}
+  
+    /* ---------- ТАРИФЫ ---------- */
+    .section-title{margin:86px 0 22px; font-size:28px}
+    .pricing{display:grid; grid-template-columns:repeat(3,1fr); gap:26px; align-items:stretch; justify-items:stretch}
+    .pricing .card{max-width:none; height:auto; padding:26px}
+  
+    /* ---------- CTA strip ---------- */
+    .cta-strip{margin:90px 0 60px}
+    .cta-strip__inner{padding:30px 32px}
+    .cta-strip h3{font-size:24px}
+    .cta-strip p{font-size:16px}
+    .cta-strip .cta{max-width:360px}
+    .cta-strip .cta .badge{width:64px; height:64px}
+    .cta-strip,.cta-strip__inner{border:0!important; outline:0!important; box-shadow:none!important; background:transparent!important}
+    .cta-strip::before,.cta-strip .cta-wrap::after{content:none!important; display:none!important}
+  
+    /* ---------- MODAL ---------- */
+    .modal__box{width:520px; max-width:560px; height:auto; padding:48px 28px}
+    .modal__title{font-size:26px}
+    .field{height:52px; font-size:15px}
+    .submit{height:56px; font-size:15px}
+  
+    /* штрихи */
+    .best{top:-22px}
+    .chip.light{padding:10px 36px}
+  }
+  
